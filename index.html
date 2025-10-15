@@ -109,13 +109,15 @@
         <p>Here are a few projects I've worked on in the past</p>
         <div class="project-section">
           <div class="pj-box project-one">
-            <img class="pj1 pj" src="media/pj1.webp" alt="" />
+            <img class="pj1 pj" src="media/carbon.png" alt="" />
             <div class="overlay-pj">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                A C++ console application that analyzes real maternal mortality
+                datasets to identify trends and relationships between
+                contributing factors. The project demonstrates proficiency in
+                file I/O, data structures, and user-driven data analysis.
               </p>
-              <a href="#">Visit Website</a>
+              <a href="#">View Code</a>
             </div>
           </div>
           <div class="pj-box project-two">
@@ -149,14 +151,19 @@
     <section id="contact" class="section">
       <h1>CO<span class="underline">NTA</span>CT</h1>
       <div class="contact-form">
-        <form class="form" action="submit">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
+        <form
+          class="form"
+          action="https://formspree.io/f/xpwykrkv"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
           <textarea
             rows="6"
+            name="message"
             class="message-box"
             type="text"
-            placeholder="Hi, can we work on ABC project together?"
+            placeholder="Hi, can we work on a project together?"
             onfocus="clearPlaceholder(this)"
             onblur="restorePlaceholder(this)"
           ></textarea>
