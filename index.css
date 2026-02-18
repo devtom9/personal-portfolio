@@ -11,6 +11,9 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  width: 100%;
+}
 header {
   background-color: rgb(34, 34, 34);
   height: 50px;
@@ -174,7 +177,16 @@ nav a:hover {
   #projects,
   #contact,
   #about {
-    height: 100%;
+    min-height: 100vh;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+  #projects,
+  #contact,
+  #about {
+    min-height: 100vh;
+    height: auto;
   }
 }
 #about h1,
@@ -245,6 +257,12 @@ section h1 {
 
 .bio-container {
   width: 450px;
+}
+@media only screen and (max-width: 1000px) {
+  .bio-container {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .biography {
   line-height: 2;
@@ -399,6 +417,20 @@ section h1 {
   height: 70%;
   margin: 30px auto;
 }
+@media only screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  .contact-form {
+    width: min(92%, 700px);
+    height: auto;
+    margin: 20px auto;
+  }
+  .form {
+    width: 100%;
+    padding: 12px;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -419,6 +451,14 @@ section h1 {
   caret-color: white;
   color: white;
   letter-spacing: 1px;
+}
+@media only screen and (max-width: 1000px) {
+  .form input,
+  .form textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: 6px 0;
+  }
 }
 .form input:focus,
 .form textarea:focus {
@@ -462,9 +502,11 @@ section h1 {
   }
 }
 .project-section {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px auto;
   display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (max-width: 480px) {
   .project-section {
@@ -472,14 +514,22 @@ section h1 {
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+  .project-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .pj-box {
   margin: 10px;
+  width: min(350px, 100%);
+  position: relative;
   transition: opacity 0.5s;
   cursor: pointer;
   color: white;
 }
 .pj {
-  width: 350px;
+  width: 100%;
   height: 270px;
   object-fit: cover;
   border-radius: 6px;
@@ -489,12 +539,14 @@ section h1 {
 /* OVERLAY */
 .overlay-pj {
   position: absolute;
-  transform: translate(0, -275px);
+  top: 0;
+  left: 0;
+  transform: none;
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 350px;
+  width: 100%;
   height: 270px;
   background-color: rgb(12, 16, 53);
   border-radius: 6px;
